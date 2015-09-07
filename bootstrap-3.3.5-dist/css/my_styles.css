@@ -1,0 +1,38 @@
+body {
+  background-color: #E8EBEB;
+}
+
+.sections,.section-bottom {
+  width: 420px;
+  position: relative;
+  margin: 0 auto;
+   box-shadow: 1px 1px 3px 1px rgba(34,34,34,0.3);
+}
+.sections {
+  height: 300px;
+  position: relative;
+  margin-top: 20px;
+  
+  
+}
+.section-bottom {
+  height: 50px;
+  border-radius: 3px;
+  background-color: #fff;
+ 
+}
+.section-bottom h3 {
+  margin: 0;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 15px;
+}
+.sections.ongoing {
+  background-color: #F16C60;
+}
+.sections.history {
+  background-color: #2C946C
+}
+.sections.new {
+  background-color: #2C4A52;
+}
