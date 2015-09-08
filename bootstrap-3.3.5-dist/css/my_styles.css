@@ -1,19 +1,17 @@
 body {
   background-color: #E8EBEB;
+  padding-top: 170px;
 }
 
-.sections,.section-bottom {
-  width: 420px;
-  position: relative;
+.sections, .section-bottom {
+  width: 300px;
+  box-shadow: 1px 1px 3px 1px rgba(34,34,34,0.3);
   margin: 0 auto;
-   box-shadow: 1px 1px 3px 1px rgba(34,34,34,0.3);
 }
 .sections {
   height: 300px;
   position: relative;
   margin-top: 20px;
-  
-  
 }
 .section-bottom {
   height: 50px;
@@ -24,7 +22,6 @@ body {
 .section-bottom h3 {
   margin: 0;
   text-align: center;
-  font-family: sans-serif;
   padding: 15px;
 }
 .sections.ongoing {
@@ -35,4 +32,98 @@ body {
 }
 .sections.new {
   background-color: #2C4A52;
+}
+.navbar {
+	background-color: rgba(0,0,0,0.9);
+ 	padding: 20px 0px;
+ 	border-color: #000;
+}
+.main-logo img {
+	width: 300px;
+}
+.sections a p {
+  color: #fff;
+  padding: 150px 10px;
+  text-align: center;
+  font-family: sans;
+  font-size: 20px;
+  font-weight: 300;
+}
+.sections a {
+  text-decoration: none;
+}
+.emp {
+  margin-top: -60px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: sans;
+  font-weight: 300;
+}
+.navbar h4 {
+	color: #fff;
+	font-family: sans;
+	font-weight: 300;
+}
+.form-control  {
+  margin-top: -38px;
+  margin-right: 470px;
+  width: 30%;
+  float: right;
+}
+.btn-add {
+  float: right;
+  margin-top: -40px;
+  margin-right: 310px;
+}
+.sections.status img {
+	width: 100%;
+}
+.sections.status {
+  height: 100%;
+}
+
+.section-bottom.stats {
+  height: 100%;
+}
+.section-bottom.stats p {
+  padding: 10px;
+}
+.text {
+  margin-top: -70px;
+  padding-bottom: 20px;
+}
+.text h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: sans;
+  font-weight: 300;
+}
+.text h3 {
+  padding-left: 20px;
+}
+.bord {
+  border-left: 1px solid #000;
+  margin-top: 20px;
+}
+.bord ul li {
+  padding: 10px;
+  list-style: none;
+  font-family: sans;
+  font-size: 18px;
+}
+.text {
+  margin-top: -70px;
+  padding-bottom: 20px;
+}
+.text h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: sans;
+  font-weight: 300;
+}
+.text h3 {
+  padding-left: 20px
+}
+.sections.status.hired, .section-bottom.stats.hired {
+  border: 3px solid lightgreen;
 }

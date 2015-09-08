@@ -6,39 +6,81 @@
 	<link rel="stylesheet" type="text/css" href="css/my_styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<a class="main-logo pull-left" href="#">
+				<img src="img/duma.png">
+			</a>	
+			<h4 class="pull-right">John Karanja</h4>
+		</div>
+	</div>
 	<div class="container">
-		<h1>Employer Dashboard</h1>
-		<div class="row">
-			<div class="col-sm-6">
+		<div class="row ft">
+
+			<h1 class="emp">Employer Dashboard</h1>
+			<div class="col-sm-4">
+				
 				<div class="sections ongoing">
+					<a href="ongoing.html">
+					<p>View Recruitment Progress</p>
 				</div>
 				<div class="section-bottom">
 					<h3>Ongoing Recruitment</h3>
 				</div>
+					</a>
 					
 			</div>
 		
-			<div class="col-sm-6">
+			<div class="col-sm-4">
+				
 				<div class="sections history">
+					<a href="previous.html">
+					<p>View Your Previous Recruitments</p>
 				</div>
 				<div class="section-bottom">
 					<h3>Previous Recruitments</h3>
-				</div>
+				</div>	
+					</a>
 			</div>
 
-		<div class="row">
-			<div class="col-sm-6">
+
+			<div class="col-sm-4">
+				
 				<div class="sections new">
+					<a data-target="#new_job" data-toggle="modal">
+					<p>Create a new Recruitment</p>
 				</div>
 				<div class="section-bottom">
-					<h3>Start a new Recruitment</h3>
+					<h3>New Recruitment</h3>
 				</div>
-			</div>
-		</div>	
+					</a>
+			</div>	
 			
 		</div>
 	</div>
 
+	<div class="modal fade" id="new_job">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h1 class="modal-title">Applicant Details</h1>
+  </div>  
+  
+  <div class="modal-body">
+  <ul class="details">
+  	<li>Name: John Karanja</li>
+  	<li>Age: 22</li>
+  	<li>Education: Moringa School</li>
+
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
