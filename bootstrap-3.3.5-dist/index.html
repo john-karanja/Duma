@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/my_styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -16,11 +17,49 @@
 			<h4 class="pull-right">John Karanja</h4>
 		</div>
 	</div>
+	<div class="navbar navbar-default orange">
+
+		<div class="container">
+			<h1 class="emp">Employer Dashboard</h1>
+		</div>
+	</div>
+	<div class="container">
+		<!-- <div class="navbar-header">
+			<a id="menu-toggle" href="#" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			</a>
+  			<a class="navbar-brand" href="home.xhtml">
+  				logo
+  			</a>
+		</div> -->
+		<div id="sidebar-wrapper" class="sidebar-toggle">
+			<ul class="sidebar-nav">
+				<div class="btn-job">
+					<a data-target="#new_job" data-toggle="modal">
+					<button type="button" class="btn btn-default btn-primary job"><i class="fa fa-plus"></i> Post a new Job</button>
+					</a>
+				</div>
+				
+
+		    	<li>
+		      		<a href="#item1">Ongoing Recruitments</a>
+		    	</li>
+		    	<li>
+		      		<a href="#item2">Previous Recruitments</a>
+		    	</li>
+		  	</ul>
+		</div>
+  	</div>
+
+
 	<div class="container">
 		<div class="row ft">
 
-			<h1 class="emp">Employer Dashboard</h1>
-			<div class="col-sm-4">
+			
+			<div class="col-sm-6">
 				
 				<div class="sections ongoing">
 					<a href="ongoing.html">
@@ -33,7 +72,7 @@
 					
 			</div>
 		
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				
 				<div class="sections history">
 					<a href="previous.html">
@@ -43,10 +82,11 @@
 					<h3>Previous Recruitments</h3>
 				</div>	
 					</a>
+
 			</div>
 
 
-			<div class="col-sm-4">
+			<!-- <div class="col-sm-4">
 				
 				<div class="sections new">
 					<a data-target="#new_job" data-toggle="modal">
@@ -56,7 +96,7 @@
 					<h3>New Recruitment</h3>
 				</div>
 					</a>
-			</div>	
+			</div>	 -->
 			
 		</div>
 	</div>
@@ -66,21 +106,49 @@
   <div class="modal-content">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h1 class="modal-title">Applicant Details</h1>
+    <h1 class="modal-title">Post A New Job</h1>
   </div>  
   
   <div class="modal-body">
-  <ul class="details">
-  	<li>Name: John Karanja</li>
-  	<li>Age: 22</li>
-  	<li>Education: Moringa School</li>
-
-  </ul>
+ <div class="form-wrapper">
+            
+        </div>
   </div>
   </div>
   </div>
   </div>
 	<script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    	$(window).resize(function() {
+	var path = $(this);
+	var contW = path.width();
+	if(contW >= 751){
+		document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+	}else{
+		document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+	}
+});
+$(document).ready(function() {
+	$('.dropdown').on('show.bs.dropdown', function(e){
+	    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+	});
+	$('.dropdown').on('hide.bs.dropdown', function(e){
+		$(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
+	});
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		var elem = document.getElementById("sidebar-wrapper");
+		left = window.getComputedStyle(elem,null).getPropertyValue("left");
+		if(left == "200px"){
+			document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
+		}
+		else if(left == "-200px"){
+			document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
+		}
+	});
+});
+    </script>
 </body>
 </html>

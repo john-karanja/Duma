@@ -1,6 +1,6 @@
 body {
   background-color: #E8EBEB;
-  padding-top: 170px;
+  padding-top: 80px;
 }
 
 .sections, .section-bottom {
@@ -10,8 +10,7 @@ body {
 }
 .sections {
   height: 300px;
-  position: relative;
-  margin-top: 20px;
+  margin: 0 auto;
 }
 .section-bottom {
   height: 50px;
@@ -34,12 +33,12 @@ body {
   background-color: #2C4A52;
 }
 .navbar {
-	background-color: rgba(0,0,0,0.9);
- 	padding: 20px 0px;
- 	border-color: #000;
+  background-color: rgba(0,0,0,0.9);
+  padding: 20px 0px;
+  border-color: #000;
 }
 .main-logo img {
-	width: 300px;
+  width: 300px;
 }
 .sections a p {
   color: #fff;
@@ -53,16 +52,16 @@ body {
   text-decoration: none;
 }
 .emp {
-  margin-top: -60px;
-  margin-bottom: 40px;
+  color: white;
   text-align: center;
   font-family: sans;
   font-weight: 300;
+  margin-top: -2px;
 }
 .navbar h4 {
-	color: #fff;
-	font-family: sans;
-	font-weight: 300;
+  color: #fff;
+  font-family: sans;
+  font-weight: 300;
 }
 .form-control  {
   margin-top: -38px;
@@ -76,7 +75,7 @@ body {
   margin-right: 310px;
 }
 .sections.status img {
-	width: 100%;
+  width: 100%;
 }
 .sections.status {
   height: 100%;
@@ -126,4 +125,72 @@ body {
 }
 .sections.status.hired, .section-bottom.stats.hired {
   border: 3px solid lightgreen;
+}
+.navbar.navbar-default.orange {
+  border-radius: 0px;
+  border: none;
+  background-color: rgba(255,143,0,0.9);
+  height: 80px;
+}
+.btn.job {
+  border-radius: 1px;
+  transition: box-shadow 0.2s;
+}
+.btn.job:hover {
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.4);
+}
+
+.btn-job {
+  margin: 10px 30px;
+}
+
+/*
+Sidebar
+======================
+*/
+
+#sidebar-wrapper {
+  top: 160px;
+  left: -200px;
+  width: 200px;
+  background-color: #f8f8f8;
+  color:;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+}
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  list-style: none;
+}
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 50px;
+}
+.sidebar-nav li a {
+  color: #707070;
+  padding: 10px;
+  text-decoration: none;
+}
+.sidebar-nav li a:hover {
+  background: #E1E1E1;
+  color: #707070;
+  text-decoration: none;
+}
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+#sidebar-wrapper.sidebar-toggle {
+  transition: all 0.3s ease-out;
+  margin-left: -200px;
+}
+@media (min-width: 768px) {
+  #sidebar-wrapper.sidebar-toggle {
+    transition: 0s;
+    left: 200px;
+  }
 }
